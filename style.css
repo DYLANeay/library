@@ -1,0 +1,145 @@
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    width:100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(71, 23, 116);
+}
+
+header h1{
+    color:white;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.hiddenUntilBtnClick{
+    display:none;
+}
+
+#content{
+    padding: 2rem;
+    height:50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content img{
+    width:6vw;
+    color:white;
+}
+
+footer{
+    background-color: #4b0082;
+    width: 100vw;
+    height: 18.1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    width:6vw;
+    color:white;
+}
+
+/* Style pour les labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #6a0dad; /* Violet clair */
+  }
+  
+  /* Style pour les champs input */
+  input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d1b3ff; /* Bordure violet clair */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f0ff; /* Fond violet très clair */
+    color: #6a0dad; /* Texte violet */
+  }
+
+  /* Style de base pour cacher l'input checkbox */
+input[type="checkbox"] {
+    appearance: none; /* Supprime l'apparence par défaut */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6a0dad; /* Bordure violet clair */
+    border-radius: 4px; /* Angles légèrement arrondis */
+    background-color: #f8f0ff; /* Fond violet très clair */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Style lorsque la case est cochée */
+  input[type="checkbox"]:checked {
+    background-color: #6a0dad; /* Fond violet clair */
+    border-color: #4b0082; /* Bordure violet foncé */
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: '✔'; /* Ajout d'une coche */
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Effet au survol */
+  input[type="checkbox"]:hover {
+    border-color: #9b59b6; /* Violet plus intense */
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+  }
+  
+  
+  /* Effet au focus */
+  input:focus {
+    border-color: #9b59b6; /* Violet un peu plus intense */
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5); /* Violet clair */
+  }
+  
+  /* Bouton d'envoi */
+  button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #6a0dad; /* Violet clair */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button.btnAddBook{
+    border-radius: 20%;
+    width:25%;
+    height:20vh;
+    font-size: 1.5rem;
+
+  }
+  
+  button:hover {
+    background-color: #4b0082; /* Violet plus foncé au survol */
+  }
+  
+
+  a{
+    color:white;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+

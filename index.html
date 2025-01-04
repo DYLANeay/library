@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Simple header, flex -->
+    <header id="topBand">
+        <h1>Online Library</h1>
+    </header>
+
+
+    <!-- Div affiché seulement lors du clic sur le bouton dans le main -->
+    <div class="hiddenUntilBtnClick">
+        <div class="inputs">
+            <div class="input">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+            </div>
+            <div class="input">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+            </div>
+            <div class="input">
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="pages" required>
+            </div>
+        </div>
+
+        <div class="clickables">
+            <div class="input">
+                <label for="read-status">Read?</label>
+                <input type="checkbox" name="read" id="read-status">
+            </div>
+            <button id="submit-button">Add</button>
+            <button id="cancel-button">Cancel</button>
+        </div>
+
+    </div>
+
+
+    <!-- Partie centrale, avec un boutton et du texte -->
+    <main id="content">
+        <button class="btnAddBook">Add a book: <img src="img/plus.svg" alt="Add Button Logo"> </button>
+
+    </main>
+
+    <!-- Simple footer, avec lien qui renvoie vers mon github -->
+    <footer id="botBand">
+        <button>
+            <a href="https://github.com/DYLANeay/library">View code</a>
+            <img src="img/github.svg" alt="GitHub logo">
+        </button>
+
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
