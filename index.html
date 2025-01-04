@@ -33,16 +33,17 @@
                 <input type="text" name="author" id="author" required>
             </div>
             <div class="input">
-                <label for="pages">Pages</label>
+                <label for="pages">Number of Pages</label>
                 <input type="number" name="pages" id="pages" required>
             </div>
-        </div>
-
-        <div class="clickables">
             <div class="input">
                 <label for="read-status">Read?</label>
                 <input type="checkbox" name="read" id="read-status">
             </div>
+        </div>
+
+        <div class="clickables">
+
             <button id="submit-button">Add</button>
             <button id="cancel-button">Cancel</button>
         </div>
@@ -52,7 +53,11 @@
 
     <!-- Partie centrale, avec un boutton et du texte -->
     <main id="content">
-        <button class="btnAddBook">Add a book: <img src="img/plus.svg" alt="Add Button Logo"> </button>
+
+        <!-- ici vient mon .book -->
+        <div class="buttonBook">
+            <button class="btnAddBook">Add a book: <img src="img/plus.svg" alt="Add Button Logo"> </button>
+        </div>
 
     </main>
 

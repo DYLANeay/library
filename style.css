@@ -17,21 +17,145 @@ header h1{
     font-size: 3rem;
 }
 
-.hiddenUntilBtnClick{
-    display:none;
+/* book list once entered */
+.book {
+  width: 220px;
+  height: 250px;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.705);
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#content{
+.book>h4 {
+    margin-bottom: 2px;
+}
+
+.book > p,
+.book > input {
+    margin-bottom: 8px;
+}
+
+.book>button {
+    margin-top: auto;
+    color: black;
+}
+
+.book label {
+    margin-left: 4px;
+}
+
+
+.hiddenUntilBtnClick {
+  display: none;
+  position: fixed;
+  width:400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour chaque champ de saisie */
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.input input[type="text"],
+.input input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input input[type="text"]:focus,
+.input input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Style pour le bouton */
+.clickables {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.clickables button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #a200ff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clickables button:hover {
+  background-color: #b300a4;
+}
+
+.clickables button#cancel-button {
+  background-color: #521f66;
+}
+
+.clickables button#cancel-button:hover {
+  background-color: #42044e;
+}
+
+/* Style pour le checkbox */
+.input input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.buttonBook{
     padding: 2rem;
     height:50vh;
     display:flex;
     justify-content: center;
     align-items: center;
+    gap:40px;
 }
 
-#content img{
+.buttonBook img{
     width:6vw;
-    color:white;
+    
+}
+
+.buttonBook button{
+  color:whitesmoke;
 }
 
 footer{
@@ -47,66 +171,6 @@ footer img{
     width:6vw;
     color:white;
 }
-
-/* Style pour les labels */
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #6a0dad; /* Violet clair */
-  }
-  
-  /* Style pour les champs input */
-  input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #d1b3ff; /* Bordure violet clair */
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f8f0ff; /* Fond violet très clair */
-    color: #6a0dad; /* Texte violet */
-  }
-
-  /* Style de base pour cacher l'input checkbox */
-input[type="checkbox"] {
-    appearance: none; /* Supprime l'apparence par défaut */
-    width: 20px;
-    height: 20px;
-    border: 2px solid #6a0dad; /* Bordure violet clair */
-    border-radius: 4px; /* Angles légèrement arrondis */
-    background-color: #f8f0ff; /* Fond violet très clair */
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  /* Style lorsque la case est cochée */
-  input[type="checkbox"]:checked {
-    background-color: #6a0dad; /* Fond violet clair */
-    border-color: #4b0082; /* Bordure violet foncé */
-  }
-  
-  input[type="checkbox"]:checked::after {
-    content: '✔'; /* Ajout d'une coche */
-    color: white;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Effet au survol */
-  input[type="checkbox"]:hover {
-    border-color: #9b59b6; /* Violet plus intense */
-    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
-  }
-  
-  
-  /* Effet au focus */
-  input:focus {
-    border-color: #9b59b6; /* Violet un peu plus intense */
-    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5); /* Violet clair */
-  }
   
   /* Bouton d'envoi */
   button {
