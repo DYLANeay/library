@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const readStatus = document.querySelector('#read-status');
   const buttonBook = document.querySelector('.buttonBook');
 
+  pagesInput.addEventListener('input', (event) => {
+    if (pagesInput.validity.tooShort) {
+      pagesInput.setCustomValidity('Pages number should be greater than 0');
+    } else {
+      pagesInput.setCustomValidity(' ');
+    }
+  });
+
   function Book(title, author, pages, readStatus) {
     this.title = title;
     this.author = author;
@@ -18,22 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
     this.readStatus = readStatus;
   }
 
-  function validateInputs(title, author, pages) {
-    if (!title.trim() || !author.trim()) {
-      return 'Title and author are required.';
-    }
-    if (!/^[0-9]+$/.test(pages) || parseInt(pages) <= 0) {
-      return 'Pages must be a positive number.';
-    }
-    return '';
-  }
+  //   function validateInputs(title, author, pages) {
+  //     if (!title.trim() || !author.trim()) {
+  //       return 'Title and author are required.';
+  //     }
+  //     if (!/^[0-9]+$/.test(pages) || parseInt(pages) <= 0) {
+  //       return 'Pages must be a positive number.';
+  //     }
+  //     return '';
+  //   }
 
   function addBookToLibrary(title, author, pages, readStatus) {
-    const validationError = validateInputs(title, author, pages);
-    if (validationError) {
-      alert(validationError);
-      return;
-    }
+    // const validationError = validateInputs(title, author, pages);
+    // if (validationError) {
+    //   alert(validationError);
+    //   return;
+    // }
 
     myLibrary.push(new Book(title, author, pages, readStatus));
 
@@ -110,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   submitButton.addEventListener('click', function () {
+    let validInput = true;
+
     addBookToLibrary(
       titleInput.value,
       authorInput.value,
